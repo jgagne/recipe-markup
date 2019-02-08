@@ -8,10 +8,13 @@ https://bitsofco.de/a-look-at-css-resets-in-2018/
 /*
 1. https://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
 2. https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+3. prevent adjustments of font-size after orientation changes in iOS
+https://github.com/necolas/normalize.css/blob/fc091cce1534909334c1911709a39c22d406977b/normalize.css#L13
 */
 
 html {
   font: 100%/1.15 serif; /* 1./2. */
+  -webkit-text-size-adjust: 100%; /* 3. */
 }
 
 body,
