@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="en-US" dir="ltr" id="back-to-top">
+<html lang="en-US" dir="ltr" id="home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
   <title>Sweet Potato Fries</title>
   <link rel="canonical" href="https://cooking.nytimes.com/recipes/1014647-sweet-potato-fries">
   <meta name="description" content="A recipe for oven-baked seasoned sweet potato fries.">
   <meta name="author" content="Justin Gagne">
+  <!-- polyfills / support for legacy browsers -->
+  <!-- https://html5forwebdesigners.com/today/ -->
   <script src="js/html5shiv-printshiv.min.js"></script>
+  <!-- https://caniuse.com/#search=rem -->
+  <script src="js/rem.min.js"></script>
 </head>
 <body>
 
 <!--
 
 Notes:
+
+Of Interest (Oldies, but Goodies)
 
 Bylines
 https://www.w3.org/MarkUp/HTMLPlus/htmlplus_28.html
@@ -28,7 +35,7 @@ https://snook.ca/archives/html_and_css/definition-lists-v-tables
 <header>
 
   <h1>Sweet Potato Fries</h1>
-  <p class="byline">By <a rel="author" href="https://cooking.nytimes.com/ourcooks/mark-bittman">Mark Bittman</a></p>
+  <p class="byline all-caps">By <a rel="author" href="https://cooking.nytimes.com/ourcooks/mark-bittman">Mark Bittman</a></p>
 
   <dl class="list" id="yield-time">
     <dt><b>Yield</b></dt>
@@ -37,7 +44,7 @@ https://snook.ca/archives/html_and_css/definition-lists-v-tables
     <dd><time datetime="35m">35 minutes</time></dd>
   </dl>
 
-<!-- tabular data -->
+<!-- tabular data (use a ⇡ description list insead) -->
 <!--
   <table>
     <tr>
@@ -84,19 +91,19 @@ https://snook.ca/archives/html_and_css/definition-lists-v-tables
     <li><mark>Heat the oven to 400 ℉.</mark></li>
     <li>Cut the sweet potatoes into sticks <span class="fraction">¼</span> to <span class="fraction">½</span> inch wide and 3 inches long, and toss them with the oil.</li>
     <li>Mix the spices, salt and pepper in a small bowl, and toss them with the sweet potatoes. Spread them out on 2 rimmed baking sheets.</li>
-    <li>Bake until brown and crisp on the bottom, about 15 minutes, then flip and cook until the other side is crisp, about 10 minutes. <strong>Serve hot.</strong></li>
+    <li>Bake until brown and crisp on the bottom, about 15 minutes, then flip and cook until the other side is crisp, about 10 minutes. <strong class="accent">Serve hot.</strong></li>
   </ol>
 </section>
 
 </main>
 
 <div class="back-to-top">
-  <a href="#back-to-top">Back to top ⇡</a>
+  <a href="#home">Back to top ⇡</a>
 </div>
 
 <footer id="contentinfo">
   <p class="small-print">
-    <small>Made in Massachusetts with ♥ and <a href="https://www.barebones.com/products/bbedit/">BBEdit</a>. See <a href="https://github.com/jgagne/">GitHub</a></small>
+    <small>Made in Massachusetts with <span class="accent">♥</span> and <a href="https://www.barebones.com/products/bbedit/">BBEdit</a>. See <a href="https://github.com/jgagne/">GitHub</a></small>
   </p>
 </footer>
 
