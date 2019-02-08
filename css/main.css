@@ -1,0 +1,266 @@
+/* --- resets --- */
+
+/*
+https://css-tricks.com/reboot-resets-reasoning/
+https://bitsofco.de/a-look-at-css-resets-in-2018/
+*/
+
+/*
+1. https://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
+2. https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+*/
+
+html {
+  font: 100%/1.15 serif; /* 1./2. */
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+/*
+grouping / selector lists
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  padding-left: 1.15em;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/*
+add the correct font-size in all browsers
+https://github.com/necolas/normalize.css/blob/fc091cce1534909334c1911709a39c22d406977b/normalize.css#L112-L118
+*/
+
+small {
+  font-size: 80%;
+}
+
+/* --- flexible images / responsive default for all images / do not alter  --- */
+/* https://alistapart.com/article/fluid-images */
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- sections --- */
+/* general to specific */
+
+/*
+1. use of rem unit only scales relative to the font-size of the root HTML element (set at 100%)
+https://teamtreehouse.com/library/rem-units
+https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97
+2. horizontally center block-level element
+https://css-tricks.com/centering-css-complete-guide/
+3. CSS web-safe font stack (≥90% Win/Mac)
+https://www.cssfontstack.com
+https://www.fonts.com/content/learning/fyti/using-type-tools/fonts-on-the-web
+*/
+
+body {
+  font-family: Tahoma, Arial, sans-serif; /* 3. */
+  max-width: 48rem; /* 1. */
+  background-color: #efe7e2;
+  padding: 1.5rem; /* 1. */
+  margin-left: auto; /* 2. */
+  margin-right: auto; /* 2. */
+}
+
+main {
+  background-color: #fff;
+  padding: 2em;
+  border: .3em double #b73b00;
+  border-radius: .5em;
+}
+
+section,
+dl,
+ol,
+ul {
+  padding-top: 1em;
+}
+
+section {
+  margin-top: 1em;
+}
+
+/* hero / image */
+
+.hero {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.hero img {
+  border: 1px solid #efe7e2;
+}
+
+.hero figcaption {
+  text-align: right;
+  margin-top: .25em;
+}
+
+/* back to top / home */
+
+.back-to-top {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* --- typography --- */
+
+/*
+Typography in ten minutes
+https://practicaltypography.com/typography-in-ten-minutes.html
+*/
+
+/* general to specific */
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.05;
+  word-spacing: -.025em;
+}
+
+h1,
+h2,
+dt,
+a,
+.accent {
+  color: #b73b00;
+}
+
+p,
+dd,
+li,
+figcaption,
+mark {
+  color: #692116;
+}
+
+p,
+li {
+  font-size: .96em;
+  line-height: 1.35;
+  margin-top: 1em;
+}
+
+li {
+  margin-top: .5em;
+}
+
+dt {
+  margin-top: .75em;
+  margin-bottom: .25em;
+}
+
+mark {
+  display: inline-block;
+  background-color: #ffba53;
+  padding: .125em .5em;
+}
+
+.byline {
+  font-size: 80%;
+}
+
+#summary {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* --- typographic details --- */
+
+/* reusable HTML classes */
+
+/*
+all-caps text
+https://practicaltypography.com/all-caps.html
+*/
+
+.all-caps {
+  text-transform: uppercase;
+  letter-spacing: .025em;
+}
+
+/*
+1. Upscale font-size for better readability
+2. Remove upscale line-height; reset to baseline
+*/
+
+.fraction {
+  font-size: 125%; /* 1. */
+  line-height: 0; /* 2. */
+}
+
+/* generate content for typographic style */
+
+/*
+add colon for typographic decoration
+use of generated content pseudo-element selector
+https://www.quirksmode.org/css/selectors/#t30
+*/
+
+#yield-time dt:after {
+  content: ":";
+}
+
+/* --- breakpoint for wider screens --- */
+
+@media (min-width: 30em) {
+
+  /* switch layout from display as block (t-b) to inline (l-r) */
+
+  /*
+  use of a descendant combinator/selector
+  https://www.quirksmode.org/css/selectors/#t03
+  */
+
+  #yield-time dt,
+  #yield-time dd {
+    display: inline;
+  }
+
+  #yield-time dd {
+    margin-right: .75em;
+  }
+
+}
+
+@media (min-width: 48em) {
+
+  /* upscale content */
+
+   body {
+     font-size: 125%;
+   }
+
+}
