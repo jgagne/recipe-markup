@@ -222,6 +222,12 @@ https://practicaltypography.com/all-caps.html
   line-height: 0; /* 2. */
 }
 
+/* keep short runs of text together; prevent word wrap */
+
+.no-wrap {
+  white-space: nowrap;
+}
+
 /* generate content for typographic style */
 
 /*
